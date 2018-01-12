@@ -1,5 +1,5 @@
 from math import sqrt, ceil
-from numpy import array, zeros
+from numpy import zeros
 
 input_number = 361527
 
@@ -78,4 +78,5 @@ for i in range(3, input_number+1):
     if grid[current_indices] > input_number:
         print(grid[current_indices])
         break
+
 
