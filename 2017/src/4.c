@@ -49,15 +49,11 @@ void scan_file(FILE *ifp) {
 
         for (i = 0; i < number_of_words; i++) {
             for (j = i+1; j < number_of_words; j++) {
-                printf("comparing: %s and %s\n", list_of_words[i], list_of_words[j]);
-                printf("\tstrcmp result: %d\n", strcmp(list_of_words[i], list_of_words[j]));
                 if (!strcmp(list_of_words[i], list_of_words[j])) {
                     number_of_invalid_passphrases_this_iter += 1;
-                    printf("\t\t… and they're equal!\n");
                 }
             }
         }
-        printf("\n\n");
         if (number_of_invalid_passphrases_this_iter) number_of_invalid_passphrases += 1;
     }
 
